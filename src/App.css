@@ -1,5 +1,15 @@
 .App {
+  display: flex;
   text-align: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.Center-Align {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin-top: 25px;
 }
 
 .App-logo {

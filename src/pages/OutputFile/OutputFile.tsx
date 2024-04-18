@@ -26,10 +26,11 @@ const OutputFile = () => {
     const totalDisplayValue = totalCollected <= maxValue ? totalCollected : maxValue;
 
     useEffect(() => {
-        // window.setTimeout(() => {
-        //     window.location.reload();
-        // }, 5000);
+        window.setTimeout(() => {
+            window.location.reload();
+        }, 5000);
     }, [localStorageValue]);
+
     return (
         <div style={{ margin: 25 }}>
           <div style={{ padding: 25, backgroundColor: 'white' }}>

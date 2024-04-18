@@ -6,7 +6,7 @@ const InputFile = () => {
     const [inputValue, setInputValue] = useState<number>(0);
     const lastEnteredValue = localStorage.getItem('DISPLAY_VALUE');
     const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const inputNumber = e.target.value ? parseInt(e.target.value) : 0;
+        const inputNumber = e.target.value ? parseFloat(e.target.value) : 0;
         setInputValue(inputNumber);
     };
 
@@ -30,7 +30,7 @@ const InputFile = () => {
     <div className='App'>
         <div>
             <InputLabel>Enter the Percentage Value</InputLabel>
-            <TextField style={{ marginTop: 10 }} variant="outlined" value={inputValue} onChange={onChange} />
+            <TextField style={{ marginTop: 10 }} type='number' variant="outlined" value={inputValue} onChange={onChange} />
         </div>
         <div>
             <Button onClick={onClick}>Submit</Button>

@@ -19,7 +19,7 @@ const OutputFile = () => {
     const maxValue = 500000;
     const getLocalStorageValue = localStorage.getItem('DISPLAY_VALUE');
     
-    const localStorageValue = getLocalStorageValue !== null ? parseInt(getLocalStorageValue) : 0;
+    const localStorageValue = getLocalStorageValue !== null ? parseFloat(getLocalStorageValue) : 0;
 
     const totalCollected = (localStorageValue/100) * maxValue;
 
@@ -37,7 +37,7 @@ const OutputFile = () => {
                 <InputLabel>{localStorageValue}</InputLabel>
             </div>
             <BorderLinearProgress variant="determinate" value={localStorageValue} />
-            <InputLabel>{totalDisplayValue}</InputLabel>
+            <InputLabel>{totalDisplayValue.toLocaleString()}</InputLabel>
         </div>
     )
 }

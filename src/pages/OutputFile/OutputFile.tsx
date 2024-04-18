@@ -31,13 +31,24 @@ const OutputFile = () => {
         // }, 5000);
     }, [localStorageValue]);
     return (
-        <div className='App'>
-            <div>
-                <InputLabel>Total Display Value</InputLabel>
-                <InputLabel>{localStorageValue}</InputLabel>
+        <div style={{ margin: 25 }}>
+          <div style={{ padding: 25, backgroundColor: 'white' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                <InputLabel style={{ overflow: 'visible' }}>
+                  <span style={{ fontWeight: 'bold', color: 'black', fontSize: 30 }}>Whack-a-Fraudster</span> 
+                  <span className='text text-container'>for good</span></InputLabel>
+                <div>
+                <InputLabel style={{ color: '#1a90ff', fontSize: 30, fontWeight: 'bold' }}>
+                  &#3647;{totalDisplayValue.toLocaleString()}
+                </InputLabel>
+                <InputLabel>out of &#3647;500,000 raised</InputLabel>
+
+                </div>
             </div>
-            <BorderLinearProgress variant="determinate" value={localStorageValue} />
-            <InputLabel>{totalDisplayValue.toLocaleString()}</InputLabel>
+            <div style={{ marginTop: 16 }}>
+              <BorderLinearProgress variant="determinate" value={localStorageValue} />
+            </div>
+          </div>
         </div>
     )
 }

@@ -27,7 +27,7 @@ const InputFile = () => {
 
     return (
 
-    <div className='App'>
+    <div className='App' style={{ backgroundColor: 'white', padding: 20 }}>
         <div>
             <InputLabel>Enter the Percentage Value</InputLabel>
             <TextField style={{ marginTop: 10 }} type='number' variant="outlined" value={inputValue} onChange={onChange} />

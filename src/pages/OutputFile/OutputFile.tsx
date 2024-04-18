@@ -36,7 +36,7 @@ const OutputFile = () => {
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                 <InputLabel style={{ overflow: 'visible' }}>
                   <span style={{ fontWeight: 'bold', color: 'black', fontSize: 30 }}>Whack-a-Fraudster</span> 
-                  <span className='text text-container'>for good</span></InputLabel>
+                  <span className='text text-container'> for good</span></InputLabel>
                 <div>
                 <InputLabel style={{ color: '#1a90ff', fontSize: 30, fontWeight: 'bold' }}>
                   &#3647;{totalDisplayValue.toLocaleString()}
